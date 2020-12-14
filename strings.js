@@ -4,6 +4,9 @@
 
 // .length (property - only property of strings)
 let str = 'Back once again for the renegade master';
+let string = 'D for damager Power to the people';
+
+
 
 
 // .indexOf()
@@ -18,14 +21,17 @@ let str = 'Back once again for the renegade master';
 // .toUpperCase() & .toLowerCase()
 
 
-
 // .concat() allows to concat 2 strings together
+
+
 
 
 // .endsWith() checks last character
 
 
+
 // .repeat() repeats the number of times you put in parens
+
 
 
 
@@ -34,9 +40,12 @@ let str = 'Back once again for the renegade master';
 
 
 
+
 // .split() - with empty parens it turns the string into an array, there are ways to change
 // this by putting arguments in array. For now empty parens for practice. Empty () puts entire string as
 // one thing in the array
+
+
 
 
 
