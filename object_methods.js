@@ -1,6 +1,9 @@
 // OBJECT METHODS PRACTICE
 // create a sample object to use with methods
 
+// In general what is a method?...
+  // ...A method is a property with a function as its value.
+
 
 //STATIC METHODS
 

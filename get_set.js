@@ -148,3 +148,31 @@ const chargers = {
   }
 }
 */
+
+// See this example of how to call a getter.
+// You can't use parens like in second console.log. So it's not like calling some things with .notation
+// where you use parens. Don't call getters and setters with parens, error message says not a function
+// Note how you can call the first option with brackets and a keyword, looks like different sytnax
+
+/*
+let tempObj = {
+  _num: 22,
+  get num() {
+      return this._num;
+  }
+};
+
+console.log(tempObj['num']);
+console.log(tempObj.num());
+*/
+
+// note this example from codecademy, can add without really having a setter method
+// you could put in a setter method for this, but gotta ask why
+let bikes = {
+  schwinn: 'blue',
+  trek: 'black'
+}
+
+bikes['specialized'] = 'red';
+bikes.huffy = 'silver';
+console.log(bikes);

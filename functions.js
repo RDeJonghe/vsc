@@ -1,4 +1,9 @@
 // functions practice
+// functions allow us to write reusable, modular code
+// with them we define a "chunk" of code that we can use at a later time
+// have to always define the function and the run it later (except when it's a built in method/function
+// like .toUpperCase())
+
 
 // 1. Write a function declaration without parameters using the function keyword and call the function.
 // Sometimes you don't need to use return, without return it will console, but says undefined.
@@ -85,4 +90,20 @@ console.log(club()); */
 
 
 
+
+// from Udemy course
+// Dice Roll Function
+
+function dice () {
+  let num = Math.ceil(Math.random() * 6);
+  
+}
+
+function throwDice() {
+  (dice();
+  dice();
+  return 'nice throw'
+};
+
+console.log(throwDice());
 
