@@ -170,6 +170,7 @@ console.log(containsPurple(['blue', 'pink', 'purple']))
 // in the password it will evaluate to -1, that's what we want. So we check to see if it doesn't = that
 // with this it could also be done with setting variables and checking the variables
 
+/*
 function isValidPassword(password, username) {
   if(password.length < 8) {
     return false;
@@ -177,19 +178,23 @@ function isValidPassword(password, username) {
   if(password.indexOf(' ') !== -1) {
     return false;
   }
-  /*
-  if(password.indexOf(username) !== -1) { // can use indexOf with multiple characters
-    return false;
-  }
-  */
+*/
+    /*
+      if(password.indexOf(username) !== -1) { // can use indexOf with multiple characters
+        return false;
+      }
+    */
+/*
   if(password.includes(username)) { // this also works
     return false;
   }
 
  return true;
 }
+*/
 
 // can also write like this with or statements, but still checking False instead of true
+/*
 function isValid(password, username) {
   if(
     password.length < 8 ||
@@ -200,6 +205,7 @@ function isValid(password, username) {
   }
   return true;
 }
+*/
 
 // can also write with variables
 /*
@@ -213,10 +219,40 @@ function Valid(password, username) {
 */
 
 // can also switch this with not ! operator
+/*
 function valid(password, username) {
   const tooShort = password.length < 8;
   const hasSpace = password.indexOf(' ') !== -1;
   const tooSimilar = password.includes(username);
-  if(!tooShort && !hasSpace && !tooSimilar) return true; // note && is needed
+  if(!tooShort && !hasSpace && !tooSimilar) return true; // note && is needed here
   return false;
 }
+*/
+
+// Look at this, can just return the last thing it's checking, since that evaluates to true or false
+// good example of refactoring to make it brief and still get true or false
+/*
+function valid(password, username) {
+  const tooShort = password.length < 8;
+  const hasSpace = password.indexOf(' ') !== -1;
+  const tooSimilar = password.includes(username);
+  return !tooShort && !hasSpace && !tooSimilar;
+}
+*/
+
+// From Udemy course, write a function to find the average value in an array of numbers
+
+function avgValue (arr) {
+  let total = 0;
+  for(i = 0; i < arr.length; i++){
+    total += arr[i];
+  }
+  let avg = total / arr.length;
+  console.log(avg);
+  return avg;
+}
+
+avgValue([75, 76, 80, 95, 100]);
+
+
+
