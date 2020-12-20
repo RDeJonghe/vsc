@@ -243,6 +243,7 @@ function valid(password, username) {
 // From Udemy course, write a function to find the average value in an array of numbers
 // can also do with a for... of loop
 
+/*
 function avgValue (arr) {
   let total = 0;
   for(i = 0; i < arr.length; i++){
@@ -266,7 +267,17 @@ function avgValue2 (arr2) {
 }
 
 avgValue2([2, 6, 4]);
+*/
 
+function firstThing() {
+  return 'FIRST THING';
+}
+
+function secondThing() {
+  return firstThing() + 'second thing';
+}
+
+secondThing();
 
 
 
