@@ -24,3 +24,19 @@ let status = 'online'
 let color = status === 'online' ? 'green' : 'red';
 
 console.log(color);
+
+
+// Look at alternative way of writing a ternary operator. Sets up variable to the result of it
+// let isOk = (foo || bar) ? true : false;
+
+
+// example of using a ternary operator to return values:
+//return foo() ? 'bar' : qux();
+// above is more concise than this. Both do the same thing.
+/*
+if (foo()) {
+  return 'bar';
+} else {
+  return qux();
+}
+*/
