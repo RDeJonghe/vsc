@@ -663,6 +663,52 @@ let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
 
 names.forEach(name => console.log(name));
 
+// To use forEach, you need a callback function that you pass to forEach as an argument
+// For each needs a function!!!!
+// A callback function is a function that you pass to another function as an argument
+// The called function invokes the callback function when it runs.
+// The forEach method invokes its callback once for each element, passing it the element's value as argument. forEach always returns undefined.
+
+let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor', 'Sam'];
+
+let upperNames = [];
+
+names.forEach(function(element) {
+  upperNames.push(element.toUpperCase());
+});
+
+console.log(upperNames);
+
+// .forEach() is a method - so it's a function. So forEach is a function that calls a function
+// you make. That inner function runs once for each element on an array.
+
+// can also use arrow syntax with .forEach()
+let array = [1, 2, 3];
+array.forEach(num => console.log(num + 2));
+
+// .map() similar to .forEach() 
+
+let numbers = [1, 2, 3, 4]
+let squares = numbers.map(num => num * num);
+//= [ 1, 4, 9, 16 ]
+
+squares = numbers.map(num => num * num);
+// = [ 1, 4, 9, 16 ]
+
+// .filter() another iterating method for arrays, like .forEach() and .map()
+// .filter() doesn't mutate the caller
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2]
+numbers.filter(num => num > 4)
+//=[ 5, 6, 7, 8, 9, 10 ]
+
+//> numbers
+//= [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2 ]
+
+// .reduce() Another way to iterate over arrays
+// can use .reduce() to build .forEach(), .map() and .filter so it's complex
+// can also build other iterative methods with this
+
 
 // RECURSION
 // EXAMPLES AND PRACTICE FOR RECURSION
