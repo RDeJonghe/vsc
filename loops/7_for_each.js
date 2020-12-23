@@ -45,12 +45,6 @@ array.forEach(num => console.log(num + 2));
 
 
 
-let gnr = ['Axl', 'Slash', 'Duff', 'Steven'];
-
-gnr.forEach(function (member) {
-  console.log(member);
-})
-
 // note in above example, your calling gnr.forEach, so you don't have to actually call a function seperately on another line.
 
 // CAN USE REGULAR FUNCTION SYNTAX OR ARROW SYNTAX
@@ -58,9 +52,14 @@ gnr.forEach(function (member) {
 // CAN THIS BE USED ON NESTED ARRAYS? OR ARRAYS WITHIN AN OBJECT?
 
 
-let animals = ['tiger', 'lion', 'bear'];
 
-animals.forEach(type => console.log(`${type} is dangerouS`));
+
+
+
+
+
+
+
 
 
 let band = [
@@ -74,13 +73,13 @@ band.forEach(function(mem) {
   console.log(mem);
 })
 
+// POSSIBLE TO CONVERT OBJECT TO AN ARRAY AND USE FOR EACH
+
 let zoo = {
   zone1 : 'Mammals',
   zone2 : 'Reptiles',
   zone3 : 'Birds'
 };
-
-// POSSIBLE TO CONVERT OBJECT TO AN ARRAY AND USE FOR EACH
 
 let zooKeys = Object.keys(zoo);
 console.log(zooKeys);
@@ -103,15 +102,23 @@ personKeys.forEach(key => {
 });
 
 
-let nestArr = [[2, 4, 6], [5, 7, 9], [10, 11, 12]];
+// Convert to an array with Object.keys() static method (hint: need to declare this to a variable)
+// Then use .forEach() to iterate over the array printing out the value of each key in wars
+// careful with what you're calling the method with, and using [] for index
 
-nestArr.forEach(function(element) {
-  console.log(element);
-})
+let wars = {
+  '1700s' : ['Revolutionary'],
+  '1800s' : [1812, 'Civil War', 1898],
+  '1900s' : ['WW1', 'WW2', 'Vietnam'],
+  '2000s' : ['Afganistan', 'Iraq']
+};
 
-nestArr[0].forEach(element => console.log(element));
-nestArr[0].forEach(element => console.log(element + 1));
-nestArr[1].forEach(element => console.log(element));
+let arr = Object.keys(wars);
+arr.forEach(element => wars[element].push(' \'Merica'));
+
+console.log(wars);
+
+
 
 
 
