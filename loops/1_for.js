@@ -6,26 +6,57 @@
 // 1. make a counter with for loop (hint set the variable counter)
 
 
-
+// Answer
+/*
+for(let counter = 0; counter <= 10; counter ++) {
+  console.log(counter);
+}
+*/
 
 // 2. make a reverse counter with a for loop
 
 
+// Answer
+/*
+for(let counter = 10; counter > -1; counter -= 2) {
+  console.log(counter);
+}
+*/
 
 // 3. loop over an array of cities, saying you want to visit each
 
+const CITIES = ['Rio de Janeiro', 'Sao Paulo', 'Fortaleza', 'Belem', 'Curitiba', 'Porto Alegre'];
+
+// Answer
+/*
+for(let i = 0; i < CITIES.length; i++) {
+  console.log(CITIES[i].toUpperCase() + ' is a city I want to visit');
+}
+*/
 
 
 
 
 // 4. in this example see how you can actually console the index before exam scores. Shows index order
-// and exam score.
+// and exam score. Find the average for all exam scores also.
 
 const EXAM_SCORES = [67, 87, 78, 95 ,68, 93, 85];
 
-for(let i = 0; i < EXAM_SCORES.length; i ++) {
-  console.log([i], EXAM_SCORES[i]);
+// answer
+/*
+let total = 0;
+for(let i = 0; i < EXAM_SCORES.length; i++) {
+  console.log(i, EXAM_SCORES[i]);
+  total += EXAM_SCORES[i];
 }
+console.log(`total of all exam scores is : ${total}`);
+let numOfExams = EXAM_SCORES.length;
+console.log(`Number of exams is ${numOfExams}`);
+let avg = total / numOfExams;
+console.log(`Average score is ${avg}`);
+*/
+
+// Answer
 
 
 // example from udemy course LOOP OVER AN ARRAY WITH OBJECTS INSIDE, GET TO EACH OBJECT
@@ -67,25 +98,17 @@ for (let i = 0; i < MY_STUDENTS.length; i++) {
 // ALSO MAKE THIS A BACKWARDS LOOP hint let i has to do with length.
 
 
+
 /* Answers:
 
 for(let i = (MY_STUDENTS.length - 1); i >= 0; i--) {
   let student = MY_STUDENTS[i].firstName;
   let grade = MY_STUDENTS[i].grade;
   console.log(student + ' scored a ' + grade);
-}
-
-for (let i = MY_STUDENTS.length -1; i >=0; i--) {
-  let student = MY_STUDENTS[i]; // look you can create a variable in the loop, then use this in
-  // the template literal instead of typing out entire MY_STUDENTS[i],
-  console.log(`${i}: Backwards loop ${student.firstName} scored a ${student.grade}.`);
-}
+};
 */
 
-
 // 7. Loop over and average all of the above test scores.
-
-
 
 
 
@@ -108,6 +131,8 @@ const WORD = 'stressed';
 
 
 
+
+
 /* Answer:
 const word = 'stressed';
 for(let i = word.length -1; i >=0; i--) {
@@ -118,7 +143,7 @@ for(let i = word.length -1; i >=0; i--) {
 // 9. Do a similar thing, but save each letter each time through the loop to a new variable. console.log it in the loop
 // so you can see each letter added
 
-let reversedWord = '';
+
 
 
 /*
@@ -135,12 +160,16 @@ for(let i = word.length -1; i >=0; i--) {
 const SONGS = ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']
 
 
-// C. USE A STANDARD FOR LOOP TO LOOP OVER MORE COMPLEX ARRAY
-// not exactly sure how to go deeper and loop and just print out animals only not type of animal
-// can get to all, hard to loop and just get to some and not others, can use += 2 instead of ++
-// to try to get to some, or change the starting index
-// might need to set a variable 'row' inside of the loop
+//answer
+/*
+for(let i = 0; i < SONGS.length; i++) {
+  console.log(SONGS[i]);
+}
+*/
 
+
+// 11. USE A STANDARD FOR LOOP TO LOOP OVER MORE COMPLEX ARRAY
+// Questions underneath array
 
 const zoo = [
   ['mammals'], [
@@ -161,18 +190,58 @@ const zoo = [
   ]
 ];
 
-for(let i = 0; i < zoo.length; i++){
+// 11a. loop over array and print out all contents individually hint: use 'row'
+
+
+
+
+// Answer
+/*
+for(let i = 0; i < zoo.length; i ++) {
   let row = zoo[i];
-  
   for(let j = 0; j < row.length; j++) {
-  console.log(row[j].toUpperCase());
+    console.log(row[j].toUpperCase() + ' the zoo is fun');
+  }
+};
+*/
+
+
+// 11b. loop over and print out just animal type, not individual animals. hint: have to i++ to hit on even
+// Make sure to print each animal type, not the array, get in to the element
+
+
+
+
+// answer
+/*
+for(let i = 0; i < zoo.length; i+= 2) {
+  let row = zoo[i];
+  for(let j = 0; j < row.length; j++) {
+    console.log(row[j]);
   }
 }
+*/
+
+
+// 11c. loop over and print out just the indivdual animals, not the class. Hint set i to something different than normal
+// and increment different than normal. Also need a row
 
 
 
-// Loop over nums, get it so you can print each number, not just print each inner array
+// Answer:
+/*
+for(let i = 1; i < zoo.length; i += 2){
+  let row = zoo[i];
+  for(let j = 0; j < row.length; j++) {
+    console.log(row[j] + ' is an animal in the zoo');
+  }
+};
+*/
+
+
+// 12. Loop over nums, get it so you can print each number, not just print each inner array
 // Hint : need to set a 'row' variable. What you console is the row[j] so row and inner index
+
 let nums = [
   [
     1, 3, 5, 7, 9
@@ -186,10 +255,19 @@ let nums = [
 ];
 
 
+// Answer
+for(let i = 0; i < nums.length; i++) {
+  let row = nums[i];
+  for(let j = 0; j < row.length; j++){
+    console.log(row[j] + ' is a number');
+  }
+};
 
-// PRACTICE USING LOOPS TO ITERATE THROUGH MIXED ARRAYS AND OBJECTS - ARRAY WITH OBJECTS, OBJECT WITH ARRAY, ETC.
 
-// Good long example of how to loop through code that has objects and arrays
+
+// 13. PRACTICE USING LOOPS TO ITERATE THROUGH MIXED ARRAYS AND OBJECTS - ARRAY WITH OBJECTS, OBJECT WITH ARRAY, ETC.
+
+// Good long example of how to loop through code that has objects and arrays. Questions below.
 // see example at bottom, when order is important [i] is needed
 
 const team = {
@@ -251,20 +329,34 @@ const team = {
   }
 }
 
+// 13a. Make a loop and print out 'Player name is # years old'. Hint: don't need to nest loops, use dot notation,
+// don't forget [i] when printing.
 
-// Loop through array to show elements that are objects
+// Answer:
 /*
-for(let element of team._players) {
-  console.log(element);
+for(let i = 0; i < team._players.length; i++) {
+  console.log(`${team._players[i].firstName} ${team.players[i].lastName} is ${team._players[i].age} years old`);
 }
 */
 
+// 13b. Loop through the _games key and show all the elments in that array (which happen to be objects) So print these objects.
+// Do this regularly and then also do it by setting a row
 
-// Loop through those objects in array
-// need i since index is important, it's in an array
-// when index isn't important can use for...in
-for(let i = 0; i < team._players.length; i++) {
-  console.log(team._players[i]);
+// answer:
+/*
+for(let i = 0; i < team._games.length; i++) {
+  console.log(team._games[i]);
 }
+*/
+
+// answer with row:
+/*
+for(let i = 0; i < team._games.length; i++) {
+  let row = team._games[i];
+  console.log(i, row);
+};
+*/
+
+
 
 

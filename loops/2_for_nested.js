@@ -55,3 +55,45 @@ for(let i = 0; i < gameBoard.length; i++) {
   }
 }
 */
+
+
+// Example of going 3 levels deep with Nested for loops
+let nums = [
+  [
+    1, 3, 5, 7, 9, [1.5, 3.5]
+  ],
+  [
+    2, 4, 6, 8, 10, [2.5, 4.5]
+  ],
+  [
+    11, 13, 15, 17, 19, [11.5, 13.5]
+  ]
+];
+// 1 level deep with for each
+
+// answer
+/*
+nums.forEach(element => console.log(element));
+*/
+
+// 2 levels deep
+/*
+for(let i = 0; i < nums.length; i++) {
+  let row = nums[i]
+  for(let j = 0; j < row.length; j++) {
+    console.log(row[j]);
+  }
+}
+*/
+// 3 Levels deep
+/*
+for(let i = 0; i < nums.length; i++) {
+  let row = nums[i];
+  for(let j = 0; j < row.length; j++) {
+    let row2 = row[j];
+    for(let k = 0; k < row2.length; k++) {
+      console.log(row2[k]);
+    }
+  }
+}
+*/
