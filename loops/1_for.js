@@ -3,7 +3,7 @@
 // for loop - has 3 expressions: 1. initialization(set iterator variable); 2. stopping condition; 
 // 3. iteration statement (update iterator variable on each loop)
 
-// 1. make a counter with for loop
+// 1. make a counter with for loop (hint set the variable counter)
 
 
 
@@ -17,18 +17,19 @@
 
 
 
-// in this example see how you can actually console the index before exam scores? Shows index order
-/*
+
+// 4. in this example see how you can actually console the index before exam scores. Shows index order
+// and exam score.
+
 const EXAM_SCORES = [67, 87, 78, 95 ,68, 93, 85];
 
-for (i = 0; i < EXAM_SCORES.length; i++) {
-  console.log(i, EXAM_SCORES[i]);
+for(let i = 0; i < EXAM_SCORES.length; i ++) {
+  console.log([i], EXAM_SCORES[i]);
 }
-*/
 
 
-// example from udemy course
-/*
+// example from udemy course LOOP OVER AN ARRAY WITH OBJECTS INSIDE, GET TO EACH OBJECT
+
 const MY_STUDENTS = [
   {
     firstName: 'Zeus',
@@ -48,16 +49,48 @@ const MY_STUDENTS = [
   }
 ];
 
+// 5. for udemy course example, loop and say Person's name scored a their grade. Hint dot notation.
+// since the key names all mach you can loop and get to each key
+// don't forget [i] stuff
+
+
+
+
+/* Answer
 for (let i = 0; i < MY_STUDENTS.length; i++) {
   console.log(`${MY_STUDENTS[i].firstName} scored a ${MY_STUDENTS[i].grade}.`);
 }
+*/
+
+//6. Do the same thing but save variables inside the loop for student name and grade then you can print this
+// without using template literals and .notation, can just use variables and concatenation to print the sentence.
+// ALSO MAKE THIS A BACKWARDS LOOP hint let i has to do with length.
+
+
+/* Answers:
+
+for(let i = (MY_STUDENTS.length - 1); i >= 0; i--) {
+  let student = MY_STUDENTS[i].firstName;
+  let grade = MY_STUDENTS[i].grade;
+  console.log(student + ' scored a ' + grade);
+}
+
 for (let i = MY_STUDENTS.length -1; i >=0; i--) {
   let student = MY_STUDENTS[i]; // look you can create a variable in the loop, then use this in
   // the template literal instead of typing out entire MY_STUDENTS[i],
   console.log(`${i}: Backwards loop ${student.firstName} scored a ${student.grade}.`);
 }
+*/
 
-// how to loop over and average all of the above test scores
+
+// 7. Loop over and average all of the above test scores.
+
+
+
+
+
+
+/* Answer
 let total = 0; // variable has to be made outside of loop. If it's in the loop it would be reassigned to 0
 for(let i = 0; i < MY_STUDENTS.length; i++) {
   total+= MY_STUDENTS[i].grade
@@ -67,15 +100,29 @@ let avg = total/MY_STUDENTS.length;
 console.log(avg);
 */
 
-// can also loop backwards... see below string loop example, this backwards loop can also be used on arrays
 
-// can also loop through strings
-/*
+
+// 8. Can also loop through strings. Loop backwards over the word 'stressed' so it spells 'desserts'
+
+const WORD = 'stressed';
+
+
+
+/* Answer:
 const word = 'stressed';
 for(let i = word.length -1; i >=0; i--) {
   console.log(i, word[i]);
 }
-// another way of printing it out, adding a letter each time, using above example
+*/
+
+// 9. Do a similar thing, but save each letter each time through the loop to a new variable. console.log it in the loop
+// so you can see each letter added
+
+let reversedWord = '';
+
+
+/*
+// Answer
 let reversedWord = '';
 for(let i = word.length -1; i >=0; i--) {
   reversedWord += word[i];
@@ -84,15 +131,17 @@ for(let i = word.length -1; i >=0; i--) {
 */
 
 
-// C. USE A STANDARD FOR LOOP TO LOOP OVER A SIMPLE ARRAY
-//const SONGS = ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']
+// 10. USE A STANDARD FOR LOOP TO LOOP OVER A SIMPLE ARRAY
+const SONGS = ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']
+
 
 // C. USE A STANDARD FOR LOOP TO LOOP OVER MORE COMPLEX ARRAY
 // not exactly sure how to go deeper and loop and just print out animals only not type of animal
 // can get to all, hard to loop and just get to some and not others, can use += 2 instead of ++
 // to try to get to some, or change the starting index
+// might need to set a variable 'row' inside of the loop
 
-/*
+
 const zoo = [
   ['mammals'], [
     'tigers',
@@ -119,7 +168,23 @@ for(let i = 0; i < zoo.length; i++){
   console.log(row[j].toUpperCase());
   }
 }
-*/
+
+
+
+// Loop over nums, get it so you can print each number, not just print each inner array
+// Hint : need to set a 'row' variable. What you console is the row[j] so row and inner index
+let nums = [
+  [
+    1, 3, 5, 7, 9
+  ],
+  [
+    2, 4, 6, 8, 10
+  ],
+  [
+    11, 13, 15, 17, 19
+  ]
+];
+
 
 
 // PRACTICE USING LOOPS TO ITERATE THROUGH MIXED ARRAYS AND OBJECTS - ARRAY WITH OBJECTS, OBJECT WITH ARRAY, ETC.
