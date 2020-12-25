@@ -1,12 +1,25 @@
-// 6. Make a do... while example, and also show how it will run even if it evaluates to false
+// do... while: Has backwards syntax. Will run once even if it is false
+
+
+// 1. Make a do... while example that evaluates to true on initinal run
 
 
 
 
 
 
+// 2. Show example where do while runs even though it is false
 
 
 
-// E. USE A DO...WHILE LOOP TO RUN AT LEAST ONCE EVEN THOUGH IT IS FALSE,
-// Do while has backwards syntax with {}
+// Answer
+/*
+let num = 10;
+
+do{
+  num ++;
+  console.log(num + ' this ran once even though it was false');
+}
+while(num < 5);
+*/
+

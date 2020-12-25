@@ -1,9 +1,12 @@
 // for loops (standard loop with 'i')
+// Takes about 40 minutes to complete
 
 // for loop - has 3 expressions: 1. initialization(set iterator variable); 2. stopping condition; 
 // 3. iteration statement (update iterator variable on each loop)
 
 // 1. make a counter with for loop (hint set the variable counter)
+
+
 
 
 // Answer
@@ -27,6 +30,7 @@ for(let counter = 10; counter > -1; counter -= 2) {
 
 const CITIES = ['Rio de Janeiro', 'Sao Paulo', 'Fortaleza', 'Belem', 'Curitiba', 'Porto Alegre'];
 
+
 // Answer
 /*
 for(let i = 0; i < CITIES.length; i++) {
@@ -40,7 +44,7 @@ for(let i = 0; i < CITIES.length; i++) {
 // 4. in this example see how you can actually console the index before exam scores. Shows index order
 // and exam score. Find the average for all exam scores also.
 
-const EXAM_SCORES = [67, 87, 78, 95 ,68, 93, 85];
+
 
 // answer
 /*
@@ -130,9 +134,6 @@ console.log(avg);
 const WORD = 'stressed';
 
 
-
-
-
 /* Answer:
 const word = 'stressed';
 for(let i = word.length -1; i >=0; i--) {
@@ -158,6 +159,8 @@ for(let i = word.length -1; i >=0; i--) {
 
 // 10. USE A STANDARD FOR LOOP TO LOOP OVER A SIMPLE ARRAY
 const SONGS = ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']
+
+
 
 
 //answer
@@ -211,7 +214,6 @@ for(let i = 0; i < zoo.length; i ++) {
 
 
 
-
 // answer
 /*
 for(let i = 0; i < zoo.length; i+= 2) {
@@ -255,13 +257,17 @@ let nums = [
 ];
 
 
+
+
 // Answer
+/*
 for(let i = 0; i < nums.length; i++) {
   let row = nums[i];
   for(let j = 0; j < row.length; j++){
     console.log(row[j] + ' is a number');
   }
 };
+*/
 
 
 
@@ -329,8 +335,11 @@ const team = {
   }
 }
 
-// 13a. Make a loop and print out 'Player name is # years old'. Hint: don't need to nest loops, use dot notation,
+// 13a. Make a loop and print out 'Player name is # years old'. Hint: don't need to nest loops, use dot notation to get there,
 // don't forget [i] when printing.
+
+
+
 
 // Answer:
 /*
@@ -341,6 +350,8 @@ for(let i = 0; i < team._players.length; i++) {
 
 // 13b. Loop through the _games key and show all the elments in that array (which happen to be objects) So print these objects.
 // Do this regularly and then also do it by setting a row
+
+
 
 // answer:
 /*
@@ -354,6 +365,11 @@ for(let i = 0; i < team._games.length; i++) {
 for(let i = 0; i < team._games.length; i++) {
   let row = team._games[i];
   console.log(i, row);
+OR
+for(let i = 0; i < team._games.length; i++){
+  let row = team._games;
+  console.log(row[i]);
+}
 };
 */
 

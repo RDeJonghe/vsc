@@ -9,6 +9,8 @@
 
 // CAN ALSO NEST LOOPS
 
+// NOTE: break in loops, if break is in a nested loop, only the nested loop will break, outter loop will continue
+
 // this shows nested loops just how they work visually
 /*
 for(let i = 1; i <=10; i++) {
