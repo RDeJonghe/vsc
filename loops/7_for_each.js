@@ -31,6 +31,8 @@ array.forEach(num => console.log(num + 2));
 let cities = ['Mexico, D.F.', 'Guadalajara', 'Monterrey', 'Puebla', 'Tijuana', 'Tuxtla Gutierreza'];
 
 
+
+
 // answer reg syntax:
 /*
 cities.forEach(function(element) {

@@ -2,8 +2,10 @@
 // of eating... you don't know how many bites, you eat while hungry)
 // variable outside of syntax
 
-// 1. do a while loop with numbers, then do the while loop example with cards (can also use break
-// in card example with an if statement)
+// 1. Do the while loop example with cards 
+//let cards = ['Heart', 'Diamond', 'Club', 'Spade'];
+
+
 
 
 // Answer
@@ -19,6 +21,8 @@ while(deal !== 'Heart') {
 
 // 2. do same example but use an if statement and break if card is 'joker', just an example deck
 // will have as many jokers as other suits. Have same probability of getting joker as any other suit
+// eventually write this out so I have entire deck and can do it like that. You might be able to .pop each card to make it really accurate
+let cards = ['Heart', 'Diamond', 'Club', 'Spade', 'Joker'];
 
 
 
@@ -49,6 +53,8 @@ while(deal !== 'Diamond') {
 
 // 3. Set a target number, and then set up a random number generator, use a while loop to generate until they match
 // Number has to be between 1 & 10. Don't know how many times it will take to match so while loop is good.
+
+let target = 6;
 
 
 

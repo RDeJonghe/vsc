@@ -1,42 +1,51 @@
 // for... of loop
 
 
-// FOR... OF LOOPS FROM UDEMY COURSE
-// new to JS. syntax is somewhat simple for(variable of iterable) {statement}
-// can use to loop over arrays and other iterables
-// the variable created will just represent every element in the array
-// works like the for loop, but you don't need to set "i" and mess with index, so this is simpler
-// name variable something that represents elements, don't use "i" since we're not using index
-/*
+
+
+// 1. Use for... of to console.log and upper case subreddits
+
 let subreddits = ['soccer', 'popheads', 'cringe', 'books'];
 
+
+// Answer
+/*
 for (let elementsOfSubreddits of subreddits) {
   console.log(elementsOfSubreddits);
 }
+*/
 
-// can use FOR OF to iterate over strings
+// 2. use FOR OF to iterate over strings. Hint, put the string in the syntax
+
+
+
+// Answer
+/*
 for(let char of 'Back once again') {
   console.log(char.toUpperCase());
 }
-
-let disney = ['Mickey', 'Minnie', 'Goofy', 'Daisy', 'Daffy'];
-for(let cartoon of disney) {
-  console.log(cartoon);
-}
 */
+
+
+
 
 
 // Examples comapring for loops with for... of loops (good example for nested loops)
 // Magic Square is a game where all numbers in row, column, diagonal have to add up to 15
 // Here for... of is good to use.
 
-/*
+// 3. Use for... of to sum and print all the rows of the array. Need a nested loop. Also do this with a regular nested for loop.
+
 const MAGIC_SQUARE = [
   [2, 7, 6],
   [9, 5, 1],
   [4, 3, 8]
 ];
 
+
+
+// Answers
+/*
 for(let i = 0; i < MAGIC_SQUARE.length; i++) {
   let row = MAGIC_SQUARE[i]
   let sum = 0; // sum is inside so each time through the loop it resets to zero and the next row can sum
@@ -59,24 +68,11 @@ for(let row of MAGIC_SQUARE) {
 */
 
 
-// Sometimes for... of is not better. Here is an example where for... of doesn't work as well, use for
-// index is important in this example
-/*
-const WORDS1 = ['mail', 'milk', 'bath', 'black'];
-const WORDS2 = ['box', 'shake', 'tub', 'berry'];
-// whole point is to print out mail and box, milk and shake, etc. In this case we need to know index.
-// so if index is needed, regular for loop is what to use
-
-for(let i = 0; i < WORDS1.length; i++) {
-  console.log(WORDS1[i], WORDS2[i]);
-  console.log(`${WORDS1[i]}${WORDS2[i]}`);
-}
-*/
 
 
-// EXAMPLE FROM UDEMY COURSE: for... of can also be used with objects
-// with objects, for can't be used since there are no indexes with objects
-/*
+
+// EXAMPLE FROM UDEMY COURSE: for... of can also be used with objects. Need object static methods
+
 const MOVIE_REVIEWS = {
   Arrival : 9.5,
   Alien : 9,
@@ -87,29 +83,42 @@ const MOVIE_REVIEWS = {
   'Little Miss Sunshine' : 8.5,
   'Coraline' : 7.5
 }
-*/
 
+// 4. Use for... of to print key, value and also pair. Hint: keys, values, entries
+
+// Answers:
 /*
+for(let el of Object.keys(MOVIE_REVIEWS)) {
+  console.log(el);
+}
 
-for(let movie of Object.keys(MOVIE_REVIEWS)) {
-  console.log(movie, MOVIE_REVIEWS[movie]);
+for(let el of Object.values(MOVIE_REVIEWS)) {
+  console.log(el);
+}
+
+for(let el of Object.entries(MOVIE_REVIEWS)) {
+  console.log(el);
 }
 */
-// for average review score, can do like this. Need to make it array to get .length
+
+// 5. Find average review score. Hint to get .length need to make a variable set to array. 8.6875 is answer. Can also do with regular for loop.
+
+
+// Answers
+// Answer A
 /*
-const OBJECT_VALUES_ARRAY = Object.values(MOVIE_REVIEWS); // this makes movie reviews an array
+let reviewArr = Object.values(MOVIE_REVIEWS);
 let sum = 0;
-let avg = 0;
-
-for(let num of Object.values(MOVIE_REVIEWS)) {
-  sum += num;
-  console.log(sum);
-  avg = sum / OBJECT_VALUES_ARRAY.length;
-  console.log(avg);
+for(let el of Object.values(MOVIE_REVIEWS)) {
+  sum += el;
 }
+console.log(sum);
+let avg = sum / reviewArr.length;
+console.log(avg)
 */
 
-// for average review score his syntax. Said this could also be done with a for loop using index
+
+// Answer B. for average review score his syntax. Said this could also be done with a for loop using index
 /*
 const RATINGS = Object.values(MOVIE_REVIEWS);
 let total = 0;
@@ -139,37 +148,60 @@ console.log(`${divided} is the average rating`);
 */
 
 
-// A. FOR...OF USE TO LOOP THROUGH AN ARRAY AND ALSO A STRING. LOOP THROUGH SIMPLE ARRAY AND SIMPLE STRING
-// Practice syntax with simple example
-//const SONGS = [['Appetite for destruction'], ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']]
+
+// 6. Use for... of to practice syntax with simple example
+const SONGS = ['Appetite for destruction', 'Welcome to the jungle', 'Paradise City', 'Sweet child of mine'];
 
 
-// FOR...OF Loop through more complex example
-// Need practice looping through arrays like this to show imbedded options, may need to nest, may need
-// to use for with [i], not sure how to go deeper
-/*
+
+
+// 7. FOR...OF Loop through more complex example. Make a nested for... of loop to print all the elments of array. Hint: use row.
+
 const zoo = [
-  'mammals', [
+  [
+  'mammals'
+  ],
+  [
     'tigers',
     'gorillas',
     'zebras'
   ],
-  'amphibians', [
+  [
+  'amphibians'
+  ],
+  [
     'frogs'
   ],
-  'reptiles', [
+  [
+  'reptiles'
+  ],
+  [
     'snakes'
   ],
-  'fish', [
+  [
+  'fish'
+  ],
+  [
     'sharks',
     'bass',
     'trout'
   ]
 ];
+
+
+
+// Answer:
+/*
+for(let el of zoo) {
+  let row = el;
+  for(let el2 of row) {
+    console.log(el2);
+  }
+}
 */
 
 
-// PRACTICE USING LOOPS TO ITERATE THROUGH MIXED ARRAYS AND OBJECTS - ARRAY WITH OBJECTS, OBJECT WITH ARRAY, ETC.
+
 
 
 // for... of can also be used with
@@ -179,3 +211,24 @@ const zoo = [
   // object.entries()
   // these methods are all iterable
 
+
+
+// NOTES: FOR... OF LOOPS FROM UDEMY COURSE
+// new to JS. syntax is somewhat simple for(variable of iterable) {statement}
+// can use to loop over arrays and other iterables
+// the variable created will just represent every element in the array
+// works like the for loop, but you don't need to set "i" and mess with index, so this is simpler
+// name variable something that represents elements, don't use "i" since we're not using index
+// Sometimes for... of is not better. Here is an example where for... of doesn't work as well, use for
+// index is important in this example
+/*
+const WORDS1 = ['mail', 'milk', 'bath', 'black'];
+const WORDS2 = ['box', 'shake', 'tub', 'berry'];
+// whole point is to print out mail and box, milk and shake, etc. In this case we need to know index.
+// so if index is needed, regular for loop is what to use
+
+for(let i = 0; i < WORDS1.length; i++) {
+  console.log(WORDS1[i], WORDS2[i]);
+  console.log(`${WORDS1[i]}${WORDS2[i]}`);
+}
+*/
