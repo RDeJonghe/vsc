@@ -89,7 +89,7 @@ console.log('Hello World')
 // CURSOR SHORTCUTS  ⌘K ⌘S Keyboard Shortcuts to see thses
 
 // 20. TOP Put in Multi cursor above and below. Then remove multi cursors ⌥⌘↑ Insert cursor above. ⌘U Undo last cursor operation
-//     ⌥⌘↓ Insert cursor below
+//     ⌥⌘↓ Insert cursor below. To exit: esc button
 
 
 

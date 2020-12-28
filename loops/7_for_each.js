@@ -29,8 +29,14 @@ array.forEach(num => console.log(num + 2));
 // 1. USE forEach() TO ITERATE OVER AN ARRAY OF CITIES, CONSOLE.LOG EACH CITY, USE BOTH REG AND ARROW SYNTAX
 
 let cities = ['Mexico, D.F.', 'Guadalajara', 'Monterrey', 'Puebla', 'Tijuana', 'Tuxtla Gutierreza'];
+let uppCities = []; 
 
+cities.forEach((el) => {
+  uppCities.push(el.toUpperCase());
 
+})
+
+console.log(uppCities);
 
 
 // answer reg syntax:
