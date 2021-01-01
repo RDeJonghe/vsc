@@ -42,13 +42,13 @@ for (let key in songs) {
 function getGenre() {
   let randomEl = Math.floor(Math.random() * genreArray.length);
   if (randomEl === 0) {
-    return (genre = 'motown');
+    return (genre = genreArray[0]);
   } else if (randomEl === 1) {
-    return (genre = 'pop60s');
+    return (genre = genreArray[1]);
   } else if (randomEl === 2) {
-    return (genre = 'pop50s');
+    return (genre = genreArray[2]);
   } else {
-    return (genre = 'beatles');
+    return (genre = genreArray[3]);
   }
 }
 
