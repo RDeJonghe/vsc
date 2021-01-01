@@ -84,11 +84,8 @@ let ob = {
 console.log(ob.day, ob['wake up'], ob.study);
 */
 
-
-
 // 2. Property Assignment - arrays are mutable. a. Change an existing key-value with a new value
 // b. Add a totally new key-value pair. c. delete a key-value pair
-
 
 // 3. Methods - when data stored on object is a function, that is called a method.
 // Make methods with key-value pairs: key is method name, value is anonymous function
@@ -97,65 +94,63 @@ console.log(ob.day, ob['wake up'], ob.study);
 // Make a simple method that console.logs a message. Then call that method
 // Do this with regular syntax and concise syntax
 
-
-
-
-
-
-
-
-
 // Example from codecademy
-
 /*
 let spaceship = {
-  passengers: [
-      {
-        name : 'Joe',
-        age : 40,
-        ocupation : 'Teacher'
-      },
-      {
-        name : 'Sally',
-        age : 40,
-        ocupation : 'Dentist'
-      },
-      {
-        name : 'Judy',
-        age : 20,
-        ocupation : 'Student'
-      }
-  ],
-  telescope: {
-    yearBuilt: 2018,
-    model: "91031-XLT",
-    focalLength: 2032 
-  },
-  crew: {
-    captain: { 
-      name: 'Sandra', 
-      degree: 'Computer Engineering', 
-      encourageTeam() { console.log('We got this!') },
-     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
-  },
-  engine: {
-    model: "Nimbus2000"
-  },
-  nanoelectronics: {
-    computer: {
-      terabytes: 100,
-      monitors: "HD"
+  passengers      : [
+    {
+      name      : 'Joe',
+      age       : 40,
+      ocupation : 'Teacher'
     },
-    'back-up': {
-      battery: "Lithium",
-      terabytes: 50
+    {
+      name      : 'Sally',
+      age       : 40,
+      ocupation : 'Dentist'
+    },
+    {
+      name      : 'Judy',
+      age       : 20,
+      ocupation : 'Student'
+    }
+  ],
+  telescope       : {
+    yearBuilt   : 2018,
+    model       : '91031-XLT',
+    focalLength : 2032
+  },
+  crew            : {
+    captain : {
+      name             : 'Sandra',
+      degree           : 'Computer Engineering',
+      encourageTeam() {
+        console.log('We got this!');
+      },
+      'favorite foods' : [
+        'cookies',
+        'cakes',
+        'candy',
+        'spinach'
+      ]
+    }
+  },
+  engine          : {
+    model : 'Nimbus2000'
+  },
+  nanoelectronics : {
+    computer  : {
+      terabytes : 100,
+      monitors  : 'HD'
+    },
+    'back-up' : {
+      battery   : 'Lithium',
+      terabytes : 50
     }
   }
-}; 
+};
 
 console.log(spaceship.passengers[0][1].name);
 */
-
 // 4. Write an object, and also a variable that sets a value equal to a key in the object.
 // then with bracket notation you can use the variable name - it's value will match with
 // the key and it will return the value pair of the object
@@ -187,7 +182,6 @@ console.log(PALLETE.blueCost);
 //console.log(PALLETE[mysteryColor]);
 //console.log(PALLETE['wh' + 'it' + 'e']);
 */
-
 
 // Nested Objects, can nest objects in an object, or arrays in an object also
 /*
@@ -231,7 +225,6 @@ const SHOPPING_CART = [
 console.log(SHOPPING_CART[1].product);
 */
 
-
 // Example of reference types and how they can refer to the same thing in memory
 // Notice how both are updated, it's becasue they point to the same spot in memory
 
@@ -267,8 +260,6 @@ console.log(nums == nums2);
 console.log(nums === nums3);
 */
 
-
-
 // Example of checking an object what works and doesn't because of reference types
 /*
 const USER = {
@@ -291,8 +282,7 @@ if(!USER.notifications.length) {
 }
 */
 
-
-// Pass by reference example. A function can modify the contents and add, don't have to 
+// Pass by reference example. A function can modify the contents and add, don't have to
 // add first to the object. In this example see how it can add the disabled property
 // in a function and then shows up in console.log
 /*
@@ -316,7 +306,6 @@ if(!USER.notifications.length) {
 
     console.log(spaceship);
 */
-
 
 // for... in loop (wants an object, only will work with object well - techincally you can
 // use with an array but not a lot of good reason to.) Arrays are kind like objects, it's just they
@@ -438,17 +427,12 @@ console.log(chargers.favPlay21());
 console.log(chargers.favPlay17());
 */
 
-
 /*
 for(let key in chargers.players) {
   console.log(key);
   console.log(`${chargers.players[key].name}'s favorite play is ${chargers.players[key].favPlay}`);
 }
-*/  
-
-
-
-
+*/
 
 // this - used to access object properties, only used with objects
 // when using this - DON'T USE WITH ARROW FUNCTIONS, DOESN'T WORK HAS TO DO WITH SCOPE
@@ -477,8 +461,6 @@ const COUGAR = {
 }
 COUGAR.diet();
 */
-
-
 
 // FACTORY FUNCTIONS
 /*
@@ -513,9 +495,6 @@ console.log(currentCar.fast());
 // Remember have to return an object inside the factory function
 // PRACTICE: Make a factory function using destructuring and put some values in and log those values
 
-
-
-
 // DESTRUCTURED ASSIGNMENT WITH OBJECTS AND VARIABLES
 // used to extract key value paris from objects and save to a variable. In cases like these, the variable
 // can use the key name and the variable is equal to the value
@@ -523,23 +502,18 @@ console.log(currentCar.fast());
 // shorter syntax, put key in {} curly braces and set it = to name of object
 
 const LT_STATS = {
-  yards: 1700,
-  tds: 31,
-  num: 21
-}
-
+  yards : 1700,
+  tds   : 31,
+  num   : 21
+};
 
 console.log(Object.entries(LT_STATS));
-
 
 // MAKE AN OBJECT THAT ACTS LIKE AN ARRAY AND IS ITERABLE WITH ARRAY SYNTAX. Use object literal syntax (e.g., { key: value, ... } notation) to create an object that behaves as an array in a for statement. The object should contain at least 3 elements. You should place your code between the braces in the let statement.
 
 // Note: Our array-like object isn't a perfect mimic of a regular JavaScript array, however. In particular, it doesn't modify the length property when you add or delete elements. It also doesn't support methods like forEach, filter, and push.
 
-
-
-
-// ANSWER 
+// ANSWER
 /*
 let myArray = {
   0 : 'Ryan',
@@ -554,4 +528,3 @@ for (let i = 0; i < myArray.length; i += 1) {
 }
 console.log(myArray[0]);
 */
-

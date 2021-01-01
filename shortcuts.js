@@ -67,7 +67,7 @@ let str = 'YO!';
 //     ⌘K ⌘0 / ⌘K ⌘J Fold/unfold all regions
 // Used to condense regions, region depends on code it looks like {} signal a region I think
 
-// 13. TOP Comment out a line ⌘/ Toggle line comment - looks to do exact same as above 2, goesB@ck and forth
+// 13. TOP Comment out a line ⌘/ Toggle line comment - looks to do exact same as above 2, goesBack and forth
 
 console.log('Hello World');
 
@@ -83,18 +83,18 @@ console.log('Hello World');
 //     ⌥⌘↓ Insert cursor below. To exit: esc button
 
 // 24. TOP select all ocurrences of word below. copy and add to it. ⇧⌘L Select all occurrences of current selection. Copy below, do this and add to above and here
-//B@ck 1nce again
-//B@ck 1nce again
+//Back 1nce again
+//Back 1nce again
 
-//B@ck 1nce again
+//Back 1nce again
 
 // 26. ⇧⌥ + drag mouse Column (box) selection - can select portions of multiple lines
 
 //27. TOP Use instead of copy and paste with mouse. Select multiple portions of the different lines UD LR ⇧⌥⌘↑ / ↓ Column (box) selection up/down - select portion of multiple lines AND  ⇧⌥⌘← / → Column (box) selection left/right - select L/R without a mouse
 
-//B@ck 1nce again
-//B@ck 1nce again
-//B@ck 1nce again
+//Back 1nce again
+//Back 1nce again
+//Back 1nce again
 
 // 29. ⇧⌥⌘PgUp Column (box) selection page up - select a whole page
 // ⇧⌥⌘PgDn Column (box) selection page down
@@ -116,7 +116,7 @@ console.log('Hello World');
 // E or A (end or beginning) POINTLESS USE COMMAND ARROWS
 // B or F (backwards or forwards) POINTLESS JUST USE ARROWS
 
-// TOP 36. Shift and arrows - select LR UD
+// TOP 36. Shift and arrows - select LR UD Use instead of mouse
 
 console.log('Hello World');
 

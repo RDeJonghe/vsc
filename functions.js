@@ -4,22 +4,35 @@
 // have to always define the function and the run it later (except when it's a built in method/function
 // like .toUpperCase())
 
-
 // 1. Write a function declaration without parameters using the function keyword and call the function.
 // Sometimes you don't need to use return, without return it will console, but says undefined.
 // If you return it won't say undefined.
-// Write a function w/o parameters where you ++ a number
+// Write a function w/o parameters where you add one to a number
 
+// Answer:
+/*
+let num = 7;
 
+function plus() {
+  return (num = num += 1);
+}
+
+console.log(plus());
+*/
+/* NOTE: IF DONE LIKE THIS DOESN'T SEEM TO WORK. SCOPE?
+      let num = 6;
+
+      function plus() {
+        return (num = num++);
+      }
+
+      console.log(plus());
+*/
 
 // 2. Write a function declaration with parameters. Write a function where you add the two parameters.
 
-
-
 // 3. Write a function declaration with a default parameter. Function can multiply parameter.
 // Can do this also with 2 default parameters.
-
-
 
 // 4. Write a function using return and that also uses an if statement. Check the different returns.
 // Can do a function where the parameter is age that you enter, function checks age and consoles a different
@@ -45,51 +58,107 @@ function club (age) {
 
 console.log(club()); */
 
-
-
-
 // 5. Write an example using a helper function (when you use return value of a function
 // inside of another function).
 // For now practice with the codecademy example of celsius conversion to fahrenheit
 // multiply by 9/5 and add 32
 
+// Answer with arrow functions:
+/*
+let mult = (num) => num * (9 / 5);
+
+let getF = (temp) => mult(temp) + 32;
+
+console.log(getF(35));
+*/
+// Answer
+/*
+function mult(num) {
+  return num * (9 / 5);
+}
+
+function getF(temp) {
+  return mult(temp) + 32;
+}
+
+console.log(getF(-5));
+*/
 
 // 6. Write a function expression that has an anonymous function (this can be stored in a variable
 // to refer to it. Write it with arguments - to call it use the variable and arguments)
 // Can do an example where you take a balance and add paycheck to it. Anonymous function inside
 // a variable. To call it write the variable() with the arguments
 
+// Answer:
+/*
+let balance = 1500;
+
+let payDay = function(pay) {
+  return (balance = balance + pay);
+};
+
+payDay(2000);
+console.log(balance);
+*/
 
 // 7. Write a function expression (anonymous with variable) using arrow syntax
 // Can do price of a product, enter in product name and will return name and price
 // For these need to use const and the name before arrow syntax (check to see if you always
 // use const or sometimes use let)
 
+// Answers:
+/*
+const PRICE = (prodName) => `${prodName} cost 99 cents`;
 
+console.log(PRICE('apples'));
 
-
+const PRICE_DAY = (day, prod) => {
+  if (day === 'Saturday') {
+    return `On ${day} ${prod} costs $1.01`;
+  } else if (day === 'Wednesday') {
+    return `On ${day} ${prod} costs $.97`;
+  } else {
+    return `On ${day} ${prod} costs $.99`;
+  }
+};
+console.log(PRICE_DAY('Saturday', 'bananas'));
+*/
 
 // 8. Write concise body arrow functions with 0, 1 and 2+ parameters. Write a single line
 // block with implicit return.
 // For 2 parameters can do dimension, for 1 parameter can do a pricing calculation
 // can also think about doing currency calculations
-// for a project do an estimation calculator for say roofing or flooring, width * height plus 
+// for a project do an estimation calculator for say roofing or flooring, width * height plus
 // another parameter for choosing a product, if statement to go through all the pricing options
 // in codecademy all examples with concise arrow functions use const, so they also seem anonymous
 
-
-          
-// 9. using functions show how global and local scope works. Show how you can 
+// 9. using functions show how global and local scope works. Show how you can
 // console.log global scoped variables outside, but can't console.log local scoped
 // variables outside
-
 
 //work with this, see if you chnage something in a function it might change it outside,
 // so distinction between inside and outside is important. Maybe because of pass by refernece
 // maybe functions change value despite of global/local scope
 
+// 10. Function composition (sounds basically the same as helper functions. You pass in a function as an argument for another function). Write an example of this. Have an add function, subtract function and multiply function. Pass in the add and subtract into the multiply function.
 
+// Answer:
 
+/*
+function add(num1 = 10, num2 = 5) {
+  return num1 + num2;
+}
+
+function subt(num1 = 20, num2 = 10) {
+  return num1 - num2;
+}
+
+function mult(num1, num2) {
+  return num1 * num2;
+}
+
+console.log(mult(add(1, 1), subt()));
+*/
 
 // from Udemy course
 // Dice Roll Function
@@ -151,7 +220,6 @@ function containsPurple(arr) {
 console.log(containsPurple(['blue', 'pink', 'purple']))
 */
 
-
 // Example from Udemy course
 // Write a isValidPasswordFunction
 // accepts 2 arguments: password and username
@@ -166,7 +234,7 @@ console.log(containsPurple(['blue', 'pink', 'purple']))
 // did this instead of using && and checking if everything is true or nesting a bunch of if statements
 
 // note he uses multiple if statements instead of doing if/else
-// note checks for indexOf ' ' the space character. Checks if it = -1. If a space is not 
+// note checks for indexOf ' ' the space character. Checks if it = -1. If a space is not
 // in the password it will evaluate to -1, that's what we want. So we check to see if it doesn't = that
 // with this it could also be done with setting variables and checking the variables
 
@@ -179,7 +247,7 @@ function isValidPassword(password, username) {
     return false;
   }
 */
-    /*
+/*
       if(password.indexOf(username) !== -1) { // can use indexOf with multiple characters
         return false;
       }
@@ -268,7 +336,7 @@ function avgValue2 (arr2) {
 
 avgValue2([2, 6, 4]);
 */
-
+/*
 function firstThing() {
   return 'FIRST THING';
 }
@@ -278,7 +346,78 @@ function secondThing() {
 }
 
 secondThing();
+*/
 
+let motown = [
+  "Ain't too proud to beg",
+  "You can't hurry love",
+  'What becomes of the broken hearted',
+  "Can't help myself"
+];
 
+function jukebox() {
+  let el = Math.floor(Math.random() * motown.length);
+  return motown[el];
+}
 
+// console.log(jukebox());
 
+let songs = {
+  motown : [
+    "Ain't too proud to beg",
+    "You can't hurry love",
+    'What becomes of the broken hearted',
+    "Can't help myself"
+  ],
+  pop60s : [
+    "I'm a believer",
+    'Brown Eyed Girl',
+    'Under the Boardwalk'
+  ],
+  pop50s : [
+    'Rock around the clock',
+    'A teenager in love',
+    "Rockin' Robin"
+  ]
+};
+
+let arr = [];
+function randomGenre() {
+  for (let key in songs) {
+    return arr.push;
+  }
+}
+randomGenre();
+console.log(arr);
+
+/*
+console.log(Math.floor(Math.random() * Object.keys(songs).length));
+
+let genre = function() {
+  let key = Math.floor(Math.random() * Object.keys(songs).length);
+  if (key === 0) {
+    return 'motown';
+  }
+  if (key === 1) {
+    return 'pop60s';
+  }
+  if (key === 2) {
+    return 'pop50s';
+  }
+};
+
+console.log(songs[genre()]);
+
+console.log(songs[genre()].length);
+
+// function juke() {
+//   let el = Math.floor(Math.random() * songs[genre()].length);
+//   return `your song is ${songs[genre()][el]}`;
+// }
+
+function juke() {
+  return `your song is ${songs[genre()][Math.floor(Math.random() * songs[genre()].length)]}`;
+}
+
+console.log(juke()); // Good start but is buggy, prints undefined sometimes, may be problem with accessing an element that doesn't exist. Because I'm calling genre() twice so it doesn't always match up.
+*/
