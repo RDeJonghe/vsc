@@ -9,19 +9,23 @@
 
 // TOP 1. Move a line up or down but don't copy it. ⌥↓ / ⌥↑ Move line up/down
 
-let str3 = 'Today?';
-let str = 'YO!';
 let str2 = 'Whaddup';
+let str = 'YO!';
+let str3 = 'Today?';
 
 // TOP 2. Copy a line without selecting it and move it up or down. ⇧⌥↓ / ⇧⌥↑ Copy Line up/down
 
 let str = 'YO! Whaddup?';
 let str = 'YO! Whaddp?';
 let str = 'YO! Whaddup?';
+let str = 'YO! Whaddup?';
+let str = 'YO! Whaddup?';
+let str = 'YO! Whaddup?';
 
 // TOP 3. Delete a line without selecting it. ⌘X Cut line - delete entire line / This also seems to work the same ⇧⌘K
 
 let str2 = 'Whaddup?';
+let str3 = 'Today?';
 let str3 = 'Today?';
 
 // TOP 4. ⌘C copy line - can copy entire line, don't have to select it
@@ -83,8 +87,8 @@ console.log('Hello World');
 //     ⌥⌘↓ Insert cursor below. To exit: esc button
 
 // 24. TOP select all ocurrences of word below. copy and add to it. ⇧⌘L Select all occurrences of current selection. Copy below, do this and add to above and here
-//Back 1nce again
-//Back 1nce again
+//  1nce again
+//  1nce again
 
 //Back 1nce again
 
@@ -94,7 +98,7 @@ console.log('Hello World');
 
 //Back 1nce again
 //Back 1nce again
-//Back 1nce again
+//Back 1gain
 
 // 29. ⇧⌥⌘PgUp Column (box) selection page up - select a whole page
 // ⇧⌥⌘PgDn Column (box) selection page down
@@ -128,3 +132,21 @@ console.log('Hello World');
 
 // Home / End = fn left right arrow
 // PgUp / PgDn = fn down arrow, fn up arrow
+
+// Extra Practice
+
+// 24. TOP select all ocurrences of word below. copy and add to it. ⇧⌘L Select all occurrences of current selection. Copy below, do this and add to above and here
+//  1nce again
+//  1nce again
+//  1nce again
+
+// TOP 33. fn Delete - delete to the right
+
+// TOP 34. Shift U/D - select entire line going up/down
+
+// Command backslash \ This will open up double window
+// To toggle between mini windows / panes do Command and # of window
+
+// control and tab, let's you choose the file you want to switch between. Same as option command arrows
+
+// navigate to specifc line control g and put in line number
