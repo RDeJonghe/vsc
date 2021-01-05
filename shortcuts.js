@@ -17,10 +17,6 @@ let str3 = 'Today?';
 
 let str = 'YO! Whaddup?';
 let str = 'YO! Whaddp?';
-let str = 'YO! Whaddup?';
-let str = 'YO! Whaddup?';
-let str = 'YO! Whaddup?';
-let str = 'YO! Whaddup?';
 
 // TOP 3. Delete a line without selecting it. ⌘X Cut line - delete entire line / This also seems to work the same ⇧⌘K
 
