@@ -1,28 +1,21 @@
 // PRACTICE LOOPS
 
-// for loop - has 3 expressions: 1. initialization(set iterator variable); 2. stopping condition; 
+// for loop - has 3 expressions: 1. initialization(set iterator variable); 2. stopping condition;
 // 3. iteration statement (update iterator variable on each loop)
 
 // 1. make a counter with for loop
 
-
-
+for (let counter = 1; counter < 20; counter += 2) {
+  console.log(counter);
+}
 
 // 2. make a reverse counter with a for loop
 
-
-
 // 3. loop over an array of cities, saying you want to visit each
-
-
-
 
 // Nested Loops - when a loop is running inside another loop. Good use for this is to
 // compare elements in two arrays
 // 4. Do a nested loop comparing numbers and another nested loop comparing strings, .push() to an array
-
-
-
 
 // While loop - used for when we don't know how many times the loop should run (think of example
 // of eating... you don't know how many bites, you eat while hungry)
@@ -30,9 +23,6 @@
 
 // 5. do a while loop with numbers, then do the while loop example with cards (can also use break
 // in card example with an if statement)
-
-
-
 
 // DO... WHILE statements - used when you want code to run at least once and then loop based
 // on a condition after the initial run
@@ -42,16 +32,9 @@
 
 // 6. Make a do... while example, and also show how it will run even if it evaluates to false
 
-
-
-
-
-
 // break keyword allows you to stop the loop even if it still evaluates to true
 // use the break keyword with an if statement for an example
 // can also do example with cards, break if joker
-
-
 
 // in this example see how you can actually console the index before exam scores? Shows index order
 /*
@@ -61,7 +44,6 @@ for (i = 0; i < EXAM_SCORES.length; i++) {
   console.log(i, EXAM_SCORES[i]);
 }
 */
-
 
 // example from udemy course
 /*
@@ -119,7 +101,6 @@ for(let i = word.length -1; i >=0; i--) {
 }
 */
 
-
 // CAN ALSO NEST LOOPS
 
 // this shows nested loops just how they work visually
@@ -153,8 +134,6 @@ for(let i = 0; i < gameBoard.length; i++) {
 }
 console.log(totalScore);
 */
-
-
 
 /*
 let totalScore = 0;
@@ -192,7 +171,6 @@ console.log(`Congrats you guessed ${guess}`)
 
 // NOTE: break in loops, if break is in a nested loop, only the nested loop will break, outter loop will continue
 
-
 // FOR... OF LOOPS FROM UDEMY COURSE
 // new to JS. syntax is somewhat simple for(variable of iterable) {statement}
 // can use to loop over arrays and other iterables
@@ -216,7 +194,6 @@ for(let cartoon of disney) {
   console.log(cartoon);
 }
 */
-
 
 // Examples comapring for loops with for... of loops (good example for nested loops)
 // Magic Square is a game where all numbers in row, column, diagonal have to add up to 15
@@ -328,22 +305,21 @@ for(let i = 0; i < RATING.length; i++) {
 console.log(`${divided} is the average rating`);
 */
 
-
 // FOR... IN WITH OBJECTS
 // for... in loop (wants an object, only will work with object well - techincally you can
-  // use with an array but not a lot of good reason to.) Arrays are kind like objects, it's just they
-  // have index numbers that work like keys, they don't have key names. Order of loop in for... in
-  // isn't always the same, that's why it doesn't work well with arrays where order is most important
-  // in the syntax it looks like you have to set a variable, can name it as 'prop' or something
-  // for property, some people name it 'key' or 'k'. It looks like since properties aren't ordered
-  // like in keys this variable is just a stand in for 'every key', it's kinda like
-  // for 'every key' in 'the object that you picked'
-  // also looks like you have to use bracket notation and not dot notation, examples when
-  // console.log won't work with dot notation
-  
-  // for in loop examples
-  
-  /*
+// use with an array but not a lot of good reason to.) Arrays are kind like objects, it's just they
+// have index numbers that work like keys, they don't have key names. Order of loop in for... in
+// isn't always the same, that's why it doesn't work well with arrays where order is most important
+// in the syntax it looks like you have to set a variable, can name it as 'prop' or something
+// for property, some people name it 'key' or 'k'. It looks like since properties aren't ordered
+// like in keys this variable is just a stand in for 'every key', it's kinda like
+// for 'every key' in 'the object that you picked'
+// also looks like you have to use bracket notation and not dot notation, examples when
+// console.log won't work with dot notation
+
+// for in loop examples
+
+/*
   const jeopardyWinnings = {
     regularPlay : 20000,
     finalRound: 5000,
@@ -375,8 +351,8 @@ console.log(`${divided} is the average rating`);
   }
   console.log(`Total jeopardy winnings are ${total}`);
   */
-  
-  /*
+
+/*
   
   const gnr = {
     band: {
@@ -404,22 +380,17 @@ console.log(`${divided} is the average rating`);
   }
   
   */
-  
 
-
-
-
-  /*
+/*
   for(let key in chargers.players) {
     console.log(key);
     console.log(`${chargers.players[key].name}'s favorite play is ${chargers.players[key].favPlay}`);
   }
-  */  
+  */
 
 // A. FOR...OF USE TO LOOP THROUGH AN ARRAY AND ALSO A STRING. LOOP THROUGH SIMPLE ARRAY AND SIMPLE STRING
 // Practice syntax with simple example
 //const SONGS = [['Appetite for destruction'], ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']]
-
 
 // FOR...OF Loop through more complex example
 // Need practice looping through arrays like this to show imbedded options, may need to nest, may need
@@ -447,59 +418,56 @@ const zoo = [
 
 // B. FOR...IN USE TO LOOP OVER OBJECT. USE THIS OBJECT
 
-
 const chargers = {
-  down : '1st and goal',
-  players : {
-    qb : {
-      name : 'Philip Rivers',
-      number : 17,
-      favPlay : 'Post',
+  down      : '1st and goal',
+  players   : {
+    qb  : {
+      name    : 'Philip Rivers',
+      number  : 17,
+      favPlay : 'Post'
     },
     rb1 : {
-      name : 'LaDanian Tomlinson',
-      number : 21,
+      name    : 'LaDanian Tomlinson',
+      number  : 21,
       favPlay : 'Sweep'
     },
     rb2 : {
-      name : 'Darren Sproles',
-      number : 32,
+      name    : 'Darren Sproles',
+      number  : 32,
       favPlay : 'Screen'
     },
-    wr : {
-      name : 'Vincent Jackson',
-      number : 83,
+    wr  : {
+      name    : 'Vincent Jackson',
+      number  : 83,
       favPlay : 'Stop and Go'
     }
   },
-  coaches : {
-    head : {
-      name : 'Marty Schottenheimer',
+  coaches   : {
+    head      : {
+      name     : 'Marty Schottenheimer',
       strategy : 'Martyball'
     },
     assistant : {
-      name : 'Joe Jones',
+      name     : 'Joe Jones',
       strategy : 'Give the ball to L.T.'
     }
   },
-  favPlay21: function () {
+  favPlay21 : function() {
     return this.players.rb1.favPlay;
   },
   favPlay17() {
     return this.players.qb.favPlay;
   },
   get goTo() {
-    if(this.down === '1st and goal') {
+    if (this.down === '1st and goal') {
       return `coach says ${this.coaches.assistant.strategy}`;
-    }
-    else{
+    } else {
       return 'trick play';
     }
-  } 
-}
+  }
+};
 
 console.log(chargers.goTo);
-
 
 // C. USE A STANDARD FOR LOOP TO LOOP OVER A SIMPLE ARRAY
 //const SONGS = ['Welcome to the jungle', 'Paradise City', 'Sweet child of mine']
@@ -538,71 +506,51 @@ for(let i = 0; i < zoo.length; i++){
 }
 */
 
-
 // D. WHILE USE A WHILE LOOP TO ITERATE OVER DRAW OF A CARD DECK,
 // While loops are good for when you don't know how many times... like draw of a card deck
 
 // const CARDS = ['heart', 'diamond', 'club', 'spade'];
 
-
-
-
 // E. USE A DO...WHILE LOOP TO RUN AT LEAST ONCE EVEN THOUGH IT IS FALSE,
 // Do while has backwards syntax with {}
 
-
-
-
-
-
-
 // PRACTICE USING LOOPS TO ITERATE THROUGH MIXED ARRAYS AND OBJECTS - ARRAY WITH OBJECTS, OBJECT WITH ARRAY, ETC.
-
-
-
-
-
-
-
-
-
-
 
 // Good long example of how to loop through code that has objects and arrays
 // see example at bottom, when order is important [i] is needed
 
 const team = {
-  _players : [
+  _players  : [
     {
-    firstName : 'Josh',
-    lastName : 'Allen',
-    age : 24
-  },
-  {
-    firstName : 'Devin',
-    lastName : 'Singletary',
-    age : 23
-  },
-  {
-    firstName : 'Stefon',
-    lastName : 'Diggs',
-    age : 27
-  }
-],
-  _games : [
+      firstName : 'Josh',
+      lastName  : 'Allen',
+      age       : 24
+    },
     {
-      opponent : 'Steelers',
-      teamPoints: 24,
+      firstName : 'Devin',
+      lastName  : 'Singletary',
+      age       : 23
+    },
+    {
+      firstName : 'Stefon',
+      lastName  : 'Diggs',
+      age       : 27
+    }
+  ],
+  _games    : [
+    {
+      opponent       : 'Steelers',
+      teamPoints     : 24,
       opponentPoints : 15
     },
     {
-      opponent : 'Rams',
-      teamPoints: 35,
+      opponent       : 'Rams',
+      teamPoints     : 35,
       opponentPoints : 30
     },
     {
-      opponent : 'Patriots',
-      teamPoints: 24,
+      opponent       : 'Patriots',
+      teamPoints     : 24,
       opponentPoints : 20
     }
   ],
@@ -615,21 +563,20 @@ const team = {
   addPlayer(first, last, edad) {
     const player = {
       firstName : first,
-      lastName : last,
-      age : edad
-    }
+      lastName  : last,
+      age       : edad
+    };
     return team._players.push(player);
   },
   addGame(name, ourPoints, theirPoints) {
     const newGame = {
-      opponent: name,
-      teamPoints: ourPoints,
-      opponentPoints: theirPoints
-    }
+      opponent       : name,
+      teamPoints     : ourPoints,
+      opponentPoints : theirPoints
+    };
     return team._games.push(newGame);
   }
-}
-
+};
 
 // Loop through array to show elements that are objects
 /*
@@ -638,38 +585,55 @@ for(let element of team._players) {
 }
 */
 
-
 // Loop through those objects in array
 // need i since index is important, it's in an array
 // when index isn't important can use for...in
-for(let i = 0; i < team._players.length; i++) {
+for (let i = 0; i < team._players.length; i++) {
   console.log(team._players[i]);
 }
-
-
-
 
 // FOR EACH
 // EXAMPLES AND PRACTICE WITH FOR EACH
 
-let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+let names = [
+  'Chris',
+  'Kevin',
+  'Naveed',
+  'Pete',
+  'Victor'
+];
 
 names.forEach(function(name) {
   console.log(name);
 });
 
 // above example also refactored as:
-let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+/*
+let names = [
+  'Chris',
+  'Kevin',
+  'Naveed',
+  'Pete',
+  'Victor'
+];
 
-names.forEach(name => console.log(name));
+names.forEach((name) => console.log(name));
+*/
 
 // To use forEach, you need a callback function that you pass to forEach as an argument
 // For each needs a function!!!!
 // A callback function is a function that you pass to another function as an argument
 // The called function invokes the callback function when it runs.
 // The forEach method invokes its callback once for each element, passing it the element's value as argument. forEach always returns undefined.
-
-let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor', 'Sam'];
+/*
+let names = [
+  'Chris',
+  'Kevin',
+  'Naveed',
+  'Pete',
+  'Victor',
+  'Sam'
+];
 
 let upperNames = [];
 
@@ -678,28 +642,51 @@ names.forEach(function(element) {
 });
 
 console.log(upperNames);
+*/
 
 // .forEach() is a method - so it's a function. So forEach is a function that calls a function
 // you make. That inner function runs once for each element on an array.
 
 // can also use arrow syntax with .forEach()
-let array = [1, 2, 3];
-array.forEach(num => console.log(num + 2));
+let array = [
+  1,
+  2,
+  3
+];
+array.forEach((num) => console.log(num + 2));
 
-// .map() similar to .forEach() 
-
-let numbers = [1, 2, 3, 4]
-let squares = numbers.map(num => num * num);
+// .map() similar to .forEach()
+/*
+let numbers = [
+  1,
+  2,
+  3,
+  4
+];
+let squares = numbers.map((num) => num * num);
 //= [ 1, 4, 9, 16 ]
 
-squares = numbers.map(num => num * num);
+squares = numbers.map((num) => num * num);
 // = [ 1, 4, 9, 16 ]
 
 // .filter() another iterating method for arrays, like .forEach() and .map()
 // .filter() doesn't mutate the caller
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2]
-numbers.filter(num => num > 4)
+let numbers = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  1,
+  2
+];
+numbers.filter((num) => num > 4);
 //=[ 5, 6, 7, 8, 9, 10 ]
 
 //> numbers
@@ -708,7 +695,6 @@ numbers.filter(num => num > 4)
 // .reduce() Another way to iterate over arrays
 // can use .reduce() to build .forEach(), .map() and .filter so it's complex
 // can also build other iterative methods with this
-
 
 // RECURSION
 // EXAMPLES AND PRACTICE FOR RECURSION
@@ -722,7 +708,8 @@ function doubler(number) {
 }
 
 doubler(5); // => 5
-            // => 10
-            // => 20
-            // => 40
-            // => 80
+// => 10
+// => 20
+// => 40
+// => 80
+*/
